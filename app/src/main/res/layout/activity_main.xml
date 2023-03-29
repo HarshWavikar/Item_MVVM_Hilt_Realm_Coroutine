@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/coordinatorLayout"
+    android:background="@color/white">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <EditText
+           android:id="@+id/edtItemName"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="50dp"
+           android:layout_marginEnd="15dp"
+           android:inputType="text"
+           android:maxLines="1"
+           android:maxLength="35"
+           android:background="@drawable/btn_bg"
+           android:drawableStart="@drawable/ic_item_name"
+           android:drawablePadding="10dp"
+           android:hint="@string/item_name"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:textColor="@color/black"
+           android:textColorHint="#9A000000" />
+
+       <EditText
+           android:id="@+id/edtItemPrice"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_below="@+id/edtItemName"
+           android:layout_marginStart="15dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginEnd="15dp"
+           android:background="@drawable/btn_bg"
+           android:drawableStart="@drawable/ic_currency"
+           android:drawablePadding="10dp"
+           android:hint="@string/item_price"
+           android:paddingStart="10dp"
+           android:inputType="number"
+           android:paddingEnd="10dp"
+           android:textColor="@color/black"
+           android:textColorHint="#9A000000" />
+
+       <Button
+           android:id="@+id/btnAddItem"
+           android:layout_width="wrap_content"
+           android:layout_marginTop="20dp"
+           android:enabled="false"
+           android:backgroundTint="@color/teal_700"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:text="@string/add_item"
+           android:layout_below="@+id/edtItemPrice"
+           android:textColor="@color/white" />
+
+       <Button
+           android:id="@+id/btnListItem"
+           android:layout_width="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:backgroundTint="@color/teal_700"
+           android:layout_below="@+id/btnAddItem"
+           android:text="@string/list_items"
+           android:textColor="@color/white" />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/itemRv"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/btnListItem"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="10dp"
+           android:layout_marginBottom="10dp" />
+
+   </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
